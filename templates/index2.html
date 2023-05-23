@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>Responsive HTML5 Page Layout Template</title>
+    <meta name="description" content="Simple HTML5 Page layout template with header, footer, sidebar etc.">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" >
+    <script src="script.js"></script>
+</head>
+
+<body>
+	<header>
+		<div id="logo"><img src="{{ url_for('static', filename='images/logo.png') }}">HTML5&nbsp;Layout</div>
+		<nav>  
+			<ul>
+				<li><a href="/">Home</a>
+				<li><a href="https://html-css-js.com/">Listar</a>
+				<li><a href="https://html-css-js.com/css/code/">CSS</a>
+				<li><a href="https://htmlcheatsheet.com/js/">JS</a>
+
+			</ul>
+		</nav>
+	</header>
+
+	<section id="pageContent">
+		<main role="main">
+			<article>
+				<div style="background:#E0DAD9">
+					<h2>Cadastrar Produto</h2>
+				</div>
+
+				<form method="post" action="/">
+
+					 <div >
+						<label>Nome do produto</label>
+						<input type="text" name="name" id="name">
+
+					 </div>
+
+					 <div >
+						<label>Preço</label>
+						<input type="text" name="preco" id="preco">
+
+					 </div>
+					<div >
+						<label>Código</label>
+						<input type="text" name="cod" id="cod">
+
+					 </div>
+
+					 <div class="button login">
+						<button>Cadastrar</button>
+					 </div>
+
+				  </form>
+
+			</article>
+
+			<article>
+				<h2>His at autem inani volutpat</h2>
+				<p>Te has amet modo perfecto, te eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.</p>
+			</article>
+		</main>
+		<aside>
+			<div>
+				<img src="{{ url_for('static', filename='images/violao.jpg') }}">
+			</div>
+
+
+		</aside>
+	</section>
+	<footer>
+		<p>&copy; You can copy, edit and publish this template but please leave a link to our website | <a href="https://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a></p>
+		<address>
+			Contact: <a href="mailto:me@example.com">Mail me</a>
+		</address>
+	</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Element</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- Responsive-->
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+<!-- fevicon -->
+<link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+<!-- owl stylesheets -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<body>
+	<!--header section start -->
+	<div class="header_section">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="logo"><a href="/"><img src="{{ url_for('static', filename='images/logoR.png') }}"></a></div>
+
+
+            </nav>
+		</div>
+	</div>
+	<!--header section end -->
+	<!--banner section start -->
+	<div class="banner_section layout_padding">
+		<div class="container">
+			<h1 class="banner_taital">Produtos de {{user}}</h1>
+
+            {% for item in produtos.items(): %}
+            <div class="read_bt">
+
+				<div class="read_text"><a>{{ item }}</a></div>
+            </div>
+            {% endfor %}
+
+
+
+
+		</div>
+
+			<a style="color: white", href="/voltar_menu">Voltar para o Menu</a>
+
+	</div>
+	<!--banner section end -->
+	<!--bg_main section start -->
+	<div class="container">
+		<div class="bg_main"><img src="{{ url_for('static', filename='images/bg-main.png') }}"></div>
+
+	</div>
+	<!--bg_main section end -->
+
+
+</body>
+</html>
